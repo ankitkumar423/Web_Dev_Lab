@@ -1,0 +1,55 @@
+body{
+	background-color: lightgrey;
+}
+
+header {  
+background-color: red;  
+position: fixed;  
+left: 0;  
+right: 0;  
+top: 0;  
+height: 30px;  
+display: flex;  
+align-items: center;  
+}  
+
+header * {  
+display: inline;  
+}
+
+header li {  
+margin: 20px;  
+margin-right: auto;
+}
+
+header li a {  
+color: white;  
+text-decoration: none;  
+}  
+
+.content{
+	padding-top: 30px;
+}
+
+.card{
+margin: auto;
+background-color: lightblue; 
+padding: 20px;   
+height: 60%;
+width: 40%;  
+align-items: center;  
+}
+
+.form-control{
+	width: 95%;
+	border: None;
+	height: 20px;	
+}
+
+.btn{
+	border-width: 1px;
+	width: 100px;
+	height: 30px;
+	background-color: #24a0ed;
+	border-radius: 10%;
+} 

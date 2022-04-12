@@ -1,0 +1,197 @@
+<html>
+    
+<head>
+    <style>
+        body{
+
+            text-align: center
+            center;
+        }
+        .cls{
+            border:2px solid black;
+            text-align: center;
+            align-content: center;
+            margin: auto;
+        }
+        .btn{
+            font-size: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10%;
+            margin: 10px;
+        }
+        #textArea{
+            padding-right: 300px;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h2 style="margin: 30px; text-align: center;"><u>SIMPLE CALCULATOR</u></h2>
+     <table class="cls">
+         <tr>
+            <td colspan="4"><input id="textArea" type="text" disabled></td>
+            
+         </tr>
+         <tr>
+             <td><input type="button" class="btn" value="7" onclick="display7()"></td>
+             <td><input type="button" class="btn" value="8" onclick="display8()"></td>
+             <td><input type="button" class="btn" value="9" onclick="display9()"></td>
+             <td><input type="button" class="btn" value="/" onclick="displaydivide()"></td>
+         </tr>
+         <tr>
+             <td><input type="button" class="btn" value="4" onclick="display4()"></td>
+             <td><input type="button" class="btn" value="5" onclick="display5()"></td>
+             <td><input type="button" class="btn" value="6" onclick="display6()"></td>
+             <td><input type="button" class="btn" value="*" onclick="displaymul()"></td>
+         </tr>
+         <tr>
+             <td><input type="button" class="btn" onclick="display1();" value="1"></td>
+             <td><input type="button" class="btn" onclick="display2();" value="2"></td>
+             <td><input type="button" class="btn" value="3"onclick="display3()"></td>
+             <td><input type="button" class="btn" value="-"onclick="displayminus()"></td>
+         </tr>
+         <tr>
+             <td><input type="button" class="btn" value="0" onclick="displayzero()"></td>
+             <td><input type="button" class="btn" value="." onclick="displaydot()"></td>
+             <td><input type="button" class="btn" value="+" onclick="displayP()"></td>
+             <td><input type="button" class="btn" value="=" onclick="displayR()"></td>
+         </tr>
+     </table>
+     <script>
+
+function displaymul()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'*';
+             textArea.value=s;
+         }
+
+
+function display6()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'6';
+             textArea.value=s;
+         }
+
+
+function display5()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'5';
+             textArea.value=s;
+         }
+
+
+function display4()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'4';
+             textArea.value=s;
+         }
+
+
+function displaydivide()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'/';
+             textArea.value=s;
+         }
+
+         function display9()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'9';
+             textArea.value=s;
+         }
+
+
+function display8()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'8';
+             textArea.value=s;
+         }
+
+
+         function displayminus()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s=s+'-';
+             textArea.value=s;
+         }
+
+         function display3()
+         {
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s = s +'3';
+             textArea.value=s;
+         }
+
+         function displaydot()
+         {
+             var textArea = document.getElementById("textArea");
+             var s=textArea.value;
+             s=s+".";
+             textArea.value=s;
+         }
+
+         function display7()
+         {
+             var s = document.getElementById("textArea").value;
+             s=s+'7';
+             document.getElementById("textArea").value=s;
+             
+         }
+         function display1(){
+             var textArea = document.getElementById("textArea");
+             var s = textArea.value;
+             s = s + "1";
+             textArea.value = s;
+         }
+         function display2(){
+             var textArea = document.getElementById("textArea");
+             var s = textArea.value;
+             s = s + "2";
+             document.getElementById("textArea").value = s;
+         }
+         function displayP(){
+            var textArea = document.getElementById("textArea");
+             var s = textArea.value;
+             s = s + "+";
+             document.getElementById("textArea").value = s;
+         }
+         function displayR(){
+            var textArea = document.getElementById("textArea");
+             var s = textArea.value;
+             var ans = eval(s);
+             document.getElementById("textArea").value = ans;
+         }
+         function displayzero(){
+             var textArea=document.getElementById("textArea");
+             var s=textArea.value;
+             s=s+'0';
+             textArea.value=s;
+         }
+     </script>
+</body>
+</html>

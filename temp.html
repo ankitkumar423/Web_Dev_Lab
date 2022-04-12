@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		function cor() {
+			var x1 = event.clientX
+			var y1 = event.clientY
+			document.getElementById("x").innerHTML = x1
+			document.getElementById("y").innerHTML = y1
+		}
+		
+	</script>
+</head>
+<body onmousemove="cor()">
+
+	
+	<p id="x"></p>
+	<p id="y"></p>
+</body>
+</html>

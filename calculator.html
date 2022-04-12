@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+        .btn{
+            width: 80px;
+            height: 60px;
+            margin: 5px;
+            font-size: 24px;
+            background-color:rgb(190, 208, 238);
+            color: black;
+            font-weight: bold;
+            border: 1px solid black;
+            border-bottom: 5px solid black;
+            border-right: 5px solid black;
+            border-radius: 20%;
+
+        }
+        .display{
+            width: 25%;
+            height: 60px;
+            margin: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 24px;
+            background-color: azure;
+            border-bottom: 5px solid black;
+            border-right: 5px solid black;
+        }
+        .display-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-container{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            margin: 50px;
+            
+        }
+        .op{
+            background-color:rgb(76, 131, 235);
+            color: white;
+        }
+        .cl{
+            background-color: rgb(248, 62, 155);
+            color: white;
+        }
+        .eq{
+            background-color: darkcyan;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1><tt>Simple Calculator</tt></h1>
+    </div>
+    <div class="container">
+        <div class="display-container">
+            <input type="text" value = "" id="display" class="display" readonly>
+        </div>
+        <br>
+        <div class="btn-container">
+            <input type="button" value="1"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="2"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="3"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="+"  class="btn op" onclick="btnPressed(this.value);">
+            <br> 
+            <input type="button" value="4"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="5"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="6"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="-"  class="btn op" onclick="btnPressed(this.value);">
+            <br>
+            <input type="button" value="7"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="8"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="9"  class="btn" onclick="btnPressed(this.value);">
+            <input type="button" value="*"  class="btn op" onclick="btnPressed(this.value);">
+            <br>
+            <input type="button" value="/"  class="btn op" onclick="btnPressed(this.value);">
+            <input type="button" value="%"  class="btn op" onclick="btnPressed(this.value);">
+            <input type="button" value="C" class="btn cl"  onclick=clearDisplay();"">
+            <input type="button" value="="  class="btn eq" onclick="solve();">
+        </div>
+    </div>
+
+    <script>
+        function btnPressed(x){
+            var display = document.getElementById("display");
+            var currText = display.value;
+            display.value = currText + x;
+        }
+        function solve(){
+            var display = document.getElementById("display");
+            var currText = display.value;
+            display.value = currText + " = " + eval(currText);
+        }
+        function clearDisplay(){
+            var display = document.getElementById("display");
+            display.value = "";
+        }
+    </script>
+</body>
+</html>
