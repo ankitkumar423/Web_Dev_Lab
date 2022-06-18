@@ -1,0 +1,5 @@
+{
+    "name":"Jhn",
+	"birth":"1986-09-11",
+	"age":"function () {return 30;}"
+}
